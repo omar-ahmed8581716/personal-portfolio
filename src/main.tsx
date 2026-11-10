@@ -1,0 +1,10 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import { LangProvider } from "./i18n";
+import { ThemeProvider } from "./theme";
+import "@fontsource/cairo/arabic-400.css"; import "@fontsource/cairo/arabic-600.css"; import "@fontsource/cairo/arabic-700.css";
+import "@fontsource/cairo/latin-400.css"; import "@fontsource/cairo/latin-600.css"; import "@fontsource/cairo/latin-700.css";
+import "./styles.css";
+createRoot(document.getElementById("root")!).render(<React.StrictMode><ThemeProvider><LangProvider><BrowserRouter><App /></BrowserRouter></LangProvider></ThemeProvider></React.StrictMode>);
